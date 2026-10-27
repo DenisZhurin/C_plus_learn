@@ -27,7 +27,7 @@ int PrintMenu()
     return numberCommand;
 }
 
-void AddTask(std::vector<std::string>&task)
+void AddTask(std::vector<std::string>&add_task)
 {
     std::string enterTask;
 
@@ -35,30 +35,30 @@ void AddTask(std::vector<std::string>&task)
     
     std::cin.ignore();
     std::getline(std::cin, enterTask);
-    task.push_back(enterTask);
+    add_task.push_back(enterTask);
 }
 
-void ShowTask(std::vector<std::string>&task)
+void ShowTask(std::vector<std::string>&show_task)
 {
-    for (int i=0; i<task.size(); i++)
+    for (int i=0; i<show_task.size(); i++)
     {
-        std::cout << "\nЗадача: " << task[i];
+        std::cout << "\nЗадача: " << show_task[i];
     }
 }
 
-void DeleteTaskIndex(std::vector<std::string>&task)
+void DeleteTaskIndex(std::vector<std::string>&delete_task)
 {
     int n=0;
     std::cout << "\nВведите номер задачи, которую хотите удалить: ";
     std::cin >> n;
 
-    if (n > task.size())
+    if (n > delete_task.size())
     {
         std::cout << "\nНет задачи с таким номмером!\n";
         return;
     }
     
-    task.erase(task.begin() + n - 1);
+    delete_task.erase(delete_task.begin() + n - 1);
 }
 
 int main()
