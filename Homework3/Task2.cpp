@@ -15,6 +15,60 @@
 #include <vector>
 #include <string>
 
+std::string PrintWord(std::vector<char>& vec_char) {
+	for (char letter : input_word) {
+		vec_char.push_back(letter);
+	}
+	return vec_char
+}
+
+void LeftRead(std::vector<std::string> resived_save_word) {
+	std::string result;
+	for (int i = 0;i < resived_save_word.size(); ++i) {
+		std::cout << "Буква на позиции " << i << ":" << resived_save_word[i] << std::endl;
+	}
+}
+
+int main() {
+	setlocale(LC_ALL, "Russian");
+	std::vector<char> letters;
+
+	std::string input_word;
+	std::cout << "Введите слово: ";
+
+	auto save_word = PrintWord(letters);
+	LeftRead(save_word);
+
+	return 0;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*
 bool IsPalindrom(int flag) {
 
 	bool result;
@@ -66,3 +120,4 @@ int main() {
 
 	return 0;
 }
+*/

@@ -25,21 +25,6 @@ int FactorialCheck(int val) {
         return 1;
     }
     return val;
-
-/* 1)
-    if (val < 0)
-    {
-        std::cerr << "\nОшибка! Число не может быть отрицательным!\n";
-        return 1;
-    }
-    else if (val == 0)
-    {
-        std::cout << "Факториал " << val << "= 1";
-        return 1;
-    }
-    
-    return val;
-    */
 }
 
  std::vector<int> ArrFactorial(int size) {
@@ -63,7 +48,7 @@ int Factorial(const std::vector<int>& factorial_value, int n) {
     
     return result;
 }
-
+/*
 int main()
 {
     setlocale(LC_ALL, "Russian");
@@ -73,9 +58,9 @@ int main()
     std::cin >> value;
 
     FactorialCheck(value);
-    // 2) std::cout << "Факториал = " << FactorialCheck(value);
     auto save_arr = ArrFactorial(value);
     std::cout << "\nФакториал " << value << " = " << Factorial(save_arr, value) << "\n";
 
     return 0;
 }
+*/
