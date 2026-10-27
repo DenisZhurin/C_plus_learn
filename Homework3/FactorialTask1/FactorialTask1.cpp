@@ -1,7 +1,7 @@
-﻿/*
-Напишите функцию, которая: 
-- называется Factorial, 
-- возвращает int, 
+/*
+Напишите функцию, которая:
+- называется Factorial,
+- возвращает int,
 - принимает int и возвращает факториал своего аргумента.Гарантируется, что аргумент функции по модулю не превышает 10.
 Для отрицательных аргументов функция должна возвращать 1.
 
@@ -17,6 +17,7 @@
 
 #include <iostream>
 #include <vector>
+#include <windows.h>
 
 int FactorialCheck(int val) {
 
@@ -27,12 +28,12 @@ int FactorialCheck(int val) {
     return val;
 }
 
- std::vector<int> ArrFactorial(int size) {
+std::vector<int> ArrFactorial(int size) {
 
     std::vector<int> arr;
     for (int i = 1;i <= size; ++i)
     {
-       arr.push_back(i);
+        arr.push_back(i);
     }
 
     return arr;
@@ -41,18 +42,20 @@ int FactorialCheck(int val) {
 int Factorial(const std::vector<int>& factorial_value, int n) {
 
     int result = 1;
-    for (int i = 1;i <= n;++i) 
+    for (int i = 1;i <= n;++i)
     {
         result *= i;
     }
-    
+
     return result;
 }
-/*
+
 int main()
 {
-    setlocale(LC_ALL, "Russian");
-    
+    //setlocale(LC_ALL, "Russian");
+    SetConsoleCP(65001);
+    SetConsoleOutputCP(65001);
+
     int value;
     std::cout << "Введите целое неотрицательное число: ";
     std::cin >> value;
@@ -63,4 +66,3 @@ int main()
 
     return 0;
 }
-*/

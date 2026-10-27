@@ -11,7 +11,7 @@ double power(double a, int n)
 int main() {
 
 	double warp;
-	int degree; 
+	int degree;
 
 	std::cin >> warp;
 	std::cin >> degree;

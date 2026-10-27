@@ -24,9 +24,9 @@ int FindMax(std::vector<int>& CreateVector) {
 	{
 		if (MaxValue < CreateVector[i])
 		{
-			MaxValue=CreateVector[i];
+			MaxValue = CreateVector[i];
 		}
-    }
+	}
 
 	return MaxValue;
 }

@@ -42,7 +42,7 @@ void ShowTask(std::vector<std::string>&show_task)
 {
     for (int i=0; i<show_task.size(); i++)
     {
-        std::cout << "\nЗадача: " << show_task[i];
+        std::cout << "\nЗадача: " << show_task[i] << "\n";
     }
 }
 
