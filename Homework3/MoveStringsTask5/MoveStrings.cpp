@@ -16,27 +16,27 @@ MoveStrings(source, destination);
 - destination должен содержать строки "z", "a", "b", "c" именно в таком порядке
 */
 
-#include <iostream>
 #include <windows.h>
+#include <iostream>
 #include <vector>
+#include <string>
 
 void MoveStrings(std::vector<std::string>& source, std::vector<std::string>& destination) {
 
-	std::vector<std::string> source = { "a","b","c" };
-	std::vector<std::string> destination = { "z" };
-
+	std::cout << "Вектор source до перемещения: ";
 	for (auto i : source) {
-		std::cout << "Вектор source до перемещения: " << source << " ";
+		std::cout << i << " ";
 	}
 	std::cout << std::endl;
 
-	for (auto i : source) {
-		std::cout << "Вектор destination до перемещения : " << destination << " ";
+	std::cout << "Вектор destination до перемещения : ";
+	for (auto q : destination) {
+		std::cout << q << " ";
 	}
 	std::cout << std::endl;
 
-	for (auto i = 0; i < source.size(); i++) {
-		std::string tmp = source[i];
+	for (auto k = 0; k < source.size(); k++) {
+		std::string tmp = source[k];
 		destination.push_back(tmp);
 	}
 	source.clear();
@@ -46,17 +46,19 @@ int main() {
 	SetConsoleCP(65001);
 	SetConsoleOutputCP(65001);
 
-	std::vector<std::string> source;
-	std::vector<std::string> destination;
+	std::vector<std::string> source = { "a","b","c" };
+	std::vector<std::string> destination = { "z" };
 	MoveStrings(source, destination);
 
+	std::cout << "\nВектор source после перемещения: ";
 	for (auto i : source) {
-		std::cout << "Вектор source после перемещения: " << source << " ";
+		std::cout << i << " ";
 	}
 	std::cout << std::endl;
 
-	for (auto i : destination) {
-		std::cout << "Вектор destination после перемещения : " << destination << " ";
+	std::cout << "Вектор destination после перемещения : ";
+	for (auto q : destination) {
+		std::cout << q << " ";
 	}
 	std::cout << std::endl;
 	
