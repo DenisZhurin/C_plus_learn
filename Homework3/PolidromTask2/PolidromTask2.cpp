@@ -15,19 +15,20 @@
 #include <vector>
 #include <string>
 
-std::string PrintWord(std::vector<char>& vec_char) {
-	for (char letter : input_word) {
+void PrintWord(std::vector<char>& vec_char) {
+	for (char letter : vec_char) {
 		vec_char.push_back(letter);
 	}
-	return vec_char
 }
 
+/*
 void LeftRead(std::vector<std::string> resived_save_word) {
 	std::string result;
 	for (int i = 0;i < resived_save_word.size(); ++i) {
 		std::cout << "Буква на позиции " << i << ":" << resived_save_word[i] << std::endl;
 	}
 }
+*/
 
 int main() {
 	setlocale(LC_ALL, "Russian");
@@ -37,7 +38,6 @@ int main() {
 	std::cout << "Введите слово: ";
 
 	auto save_word = PrintWord(letters);
-	LeftRead(save_word);
 
 	return 0;
 }
