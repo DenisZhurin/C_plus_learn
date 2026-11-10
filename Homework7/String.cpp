@@ -57,5 +57,8 @@ int main() {
   std::string tmp = s_ref.ToString();
   std::cout << tmp << std::endl;
   
+  //ReversibleString empty;
+  //std::cout << '"' << empty.ToString() << '"' << std::endl;
+
   return 0;
 }
